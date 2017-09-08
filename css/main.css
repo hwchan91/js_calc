@@ -1,19 +1,76 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgba(0,0,0,0.72);
+  background-color: rgba(0,0,0,0.01);
+}
+
+/*For selected text*/
+::selection {
+  background: #2980b9;
+  color: white;
+}
+
+#container {
+  background-color: white;
+  border: 1px solid rgba(0,0,0,0.20);
+  border-radius: 2px;
+  box-shadow: 1px 2px 4px rgba(0,0,0,0.12);
+  height: 222px;
+  left: 122px;
+  padding: 8px;
+  position: absolute;
+  top: 72px;
+  width: 144px;
+}
+
+
 .row div {
-  border: 1px solid black;
+  background: linear-gradient(white, rgba(0,0,0,0.02));
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 3px;
+  cursor: pointer;
+  float: left;
+  font-size: 14px;
   height: 30px;
-  width: 30px;
-  display: inline-block;
+  line-height: 30px; /*Centers the text vertically in the div*/
+  margin: 2px;
   text-align: center;
+  width: 30px;
+}
+
+/**
+ *When mouse is over a button
+ */
+.row div:hover {
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.08);
+  color: rgba(0,0,0,0.84);
+}
+
+/**
+ *When mouse clicks on a button
+ */
+.row div:active {
+  background: linear-gradient(rgba(0,0,0,0.02), white); /*Reverse the gradient to create a "pressed" effect*/
+  border: 1px solid rgba(0,0,0,0.18);
+  box-shadow: inset 0 0 4px rgba(0,0,0,0.18); /*Inset the gradient*/
+  color: rgba(0,0,0,0.72);
+  font-size: 13.5px;
 }
 
 .row {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  overflow: hidden; /*Prevents the other rows from floating into one long row of buttons*/
 }
 
 .display {
-  border: 1px solid black;
-  width: 140px;
+  background-color: #888;
+  border: 1px solid rgba(0,0,0,0.24);
+  box-shadow: inset 0 0 2px rgba(0,0,0,0.24);
+  box-sizing: border-box;
+  color: white;
+  font-weight: 400px;
   height: 30px;
+  margin: 2px 2px 8px; /*Top Left+Right Bottom*/
+  padding: 3px;
+  width: 140px;
   text-align: right;
 }
